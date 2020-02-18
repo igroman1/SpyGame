@@ -82,8 +82,6 @@ try:
       'https://api.vk.com/method/groups.getById', params__)
     unique_group_info = unique_group_request.json()['response']
 
-    print(unique_group_info)
-
   #сохраняем инфо о группах в переменную
     unique_group_dict['gid'] = unique_group_info[0]['id']
     unique_group_dict['name'] = unique_group_info[0]['name']
