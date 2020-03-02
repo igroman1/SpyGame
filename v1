@@ -57,12 +57,12 @@ def Friend_groups():
         'https://api.vk.com/method/groups.get', params)
     if friend_group_dict.json().get('error'):
       print(f'Аккаунт пользователя с id {ids} удален или заблокирован')
-      time.sleep(0.1)
+      time.sleep(1)
     else:
       all_friends_group_list.extend(
           friend_group_dict.json()['response']['items'])
       print(f'Обработка информации о пользователе с id {ids}')
-      time.sleep(0.1)
+      time.sleep(1)
   return(all_friends_group_list)
 
 
